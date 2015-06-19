@@ -6342,7 +6342,7 @@ CustomElements.addModule(function(scope) {
   window.Polymer = polymerStub;
   scope.consumeDeclarations = function(callback) {
     scope.consumeDeclarations = function() {
-      throw "Possible attempt to load Polymer twice";
+      throw new Error("Possible attempt to load Polymer twice");
     };
     if (callback) {
       callback(elementDeclarations);
